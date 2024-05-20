@@ -1,47 +1,91 @@
 Feature: Criar Usuario
 
     Scenario: Cadastro Valido
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When clico no novo usuario
-        When digito nome 
-        When digito email   
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
         Then crio o usuario
-    
-    Scenario: Cadastro invalido nome
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When clico no novo usuario
-        When digito nome invalido  
-        Then não crio o usuario
-    
+
+    Scenario: Cadastro invalido nome com mais de 100 caracteres
+        Given que acessei o site
+        When clico em registre-se
+        When digito um nome com mais de 100 caracteres
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
+
     Scenario: Cadastro invalido senha menor que 6
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When clico no novo usuario
-        When digito nome invalido#1 
-        Then não crio o usuario
-    
-    Scenario: Cadastro invalido nome#2
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When clico no novo usuario
-        When digito nome invalido#2
-        Then não crio o usuario
-   
-    Scenario: Cadastro invalido email
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When clico no novo usuario
-        When digito nome 
-        When digito email invalido   
-        Then não crio o usuario
-    
-    Scenario: Cadastro invalido email#1
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When clico no novo usuario
-        When digito nome 
-        When digito email invalido#1 
-        Then não crio o usuario
-        
-    Scenario: Cadastro invalido email#2
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When clico no novo usuario
-        When digito nome 
-        When digito email invalido#2
-        Then não crio o usuario
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
+
+    Scenario: Cadastro invalido senha maior que 12
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
+
+    Scenario: Cadastro invalido email repetido
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
+
+    Scenario: Cadastro invalido email com mais de 60 caracteres
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
+
+    Scenario: Cadastro invalido email vazio
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
+
+    Scenario: Cadastro invalido confirmar a senha errada
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
+
+    Scenario: Cadastro invalido confirmar a senha vazia
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
+
+    Scenario: Cadastro invalido email com 60 caracteres
+        Given que acessei o site
+        When clico em registre-se
+        When digito nome
+        When digito email
+        When digito senha
+        When confirmo a senha
+        Then crio o usuario
