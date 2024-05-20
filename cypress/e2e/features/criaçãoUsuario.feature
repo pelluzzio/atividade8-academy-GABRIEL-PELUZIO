@@ -13,7 +13,7 @@ Feature: Criar Usuario
         When digito nome invalido  
         Then não crio o usuario
     
-    Scenario: Cadastro invalido nome#1
+    Scenario: Cadastro invalido senha menor que 6
         Given que acessei a Funcionalidade de Listagem de usuarios
         When clico no novo usuario
         When digito nome invalido#1 
