@@ -1,19 +1,23 @@
 {
-  "baseUrl": "https://raromdb-frontend-c7d7dc3305a0.herokuapp.com",
+  "name": "raro-atividade-8--gabriel-peluzio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepsDefinitions": true,
     "stepDefinitions": "cypress/support/steps/[filepart].step.js"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
-    "cypress": "^13.9.0"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
-    "esbuild": "^0.21.3"
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.9.0",
+    "esbuild": "^0.21.3",
+    "reflect-metadata": "^0.2.2"
   }
 }

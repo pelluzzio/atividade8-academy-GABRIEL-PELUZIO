@@ -1,15 +1,29 @@
-Feature: Pesquisa de Usuario
+Feature: Login
 
-    Scenario: Pesquisa por email
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When existem usuarios cadastrados
-        Then pesquiso pelo email 
+    Scenario: Login correto 
+        Given que acessei o site
+        When clico em login
+        When digito o email 
+        When digito a senha 
+        When clico para entrar  
     
-    Scenario: Pesquisa por nome
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        When existe usuario cadastrado
-        Then pesquiso pelo nome     
+    Scenario: Conta Inexistente 
+       Given que entrei no site
+        When clico em login
+        When digito um email inexistente
+        When digito a senha 
+        When clico entrar
      
-     Scenario: Pesquisa por usuario inexistente 
-        Given que acessei a Funcionalidade de Listagem de usuarios
-        Then pesquiso pelo inexistente     
+    Scenario: Email em branco 
+        Given que entrei no site
+        When clico em login
+        When nao digito o email 
+        When digito a senha 
+        When clico entrar#1    
+    
+    Scenario: Senha  em branco 
+        Given que entrei no site
+        When clico em login
+        When digito o email 
+        When nao digito a senha 
+        When clico entrar#2 
